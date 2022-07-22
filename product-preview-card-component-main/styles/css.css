@@ -1,0 +1,126 @@
+:root {
+  --darkcyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --verydarkblue: hsl(212, 21%, 14%);
+  --darkgrayishblue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --fraunces: "Fraunces", serif;
+  --montserrat: "Montserrat", sans-serif;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--cream);
+  margin: 16px;
+}
+p {
+  font-size: 1.4rem;
+}
+img {
+  max-width: 100%;
+}
+.card {
+  background-color: white;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.card__imagen__desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .card {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 600px;
+  }
+  .card__imagen {
+    display: none;
+  }
+  .card__imagen__desktop {
+    display: block;
+    height: 500px;
+  }
+}
+.texto {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .texto {
+    padding: 3rem;
+    display: grid;
+    align-items: center;
+  }
+}
+.texto__tipo {
+  font-family: var(--montserrat);
+  color: var(--darkgrayishblue);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin: 0;
+}
+.texto__titulo {
+  font-family: var(--fraunces);
+}
+@media (min-width: 768px) {
+  .texto__titulo {
+    width: 90%;
+  }
+}
+
+.texto__descripcion {
+  color: var(--darkgrayishblue);
+  font-family: var(--montserrat);
+  line-height: 1.5;
+  width: 97%;
+}
+.texto__precios {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.texto__precioNuevo {
+  color: var(--darkcyan);
+  font-weight: 700;
+  font-family: var(--fraunces);
+  font-size: 3rem;
+  margin: 0;
+}
+.texto__precioViejo {
+  margin: 0;
+  margin-left: 2rem;
+  color: var(--darkgrayishblue);
+  text-decoration: line-through;
+}
+.texto__boton {
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: var(--darkcyan);
+  border-radius: 7px;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  font-family: var(--montserrat);
+  justify-content: center;
+  gap: 1rem;
+}
+.texto__boton:hover {
+  background-color: hsl(158, 36%, 21%);
+}
+@media (min-width: 768px) {
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
