@@ -1,0 +1,100 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightgrey: hsl(217, 12%, 63%);
+  --mediumgrey: hsl(216, 12%, 54%);
+  --darkblue: hsl(213, 19%, 18%);
+  --verydarkblue: hsl(216, 12%, 8%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--verydarkblue);
+  font-family: "Overpass", sans-serif;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.centrado {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.ratingstart {
+  border-radius: 14px;
+  background: linear-gradient(
+    30deg,
+    rgba(38, 47, 73, 1) 0%,
+    rgba(26, 37, 60, 1) 50%,
+    rgba(54, 59, 68, 1) 100%
+  );
+  width: 400px;
+  height: 400px;
+  padding: 3rem;
+  display: grid;
+}
+.star {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4.5rem;
+  background-color: var(--darkblue);
+}
+.ratingstart__titulo {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+.ratingstart__descripcion {
+  color: var(--lightgrey);
+  line-height: 1.5;
+  margin: 0;
+}
+.ratingstart__points {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+.ratingstart__points--point {
+  border-radius: 50%;
+  background-color: var(--darkblue);
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  line-height: 4rem;
+  color: var(--lightgrey);
+}
+.ratingstart__points--point:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+}
+.ratingstart__button {
+  text-decoration: none;
+  color: var(--white);
+  display: block;
+  background-color: var(--orange);
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.ratingstart__button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
